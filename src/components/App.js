@@ -9,7 +9,7 @@ useEffect(()=>{
  fetch("https://jsonplaceholder.typicode.com/posts")
  .then((response)=>response.json())
  .then((data)=>{
-  console.log(data);
+  //console.log(data);
   setDt(data);
  });
  
@@ -18,12 +18,12 @@ useEffect(()=>{
 return(
 <div>
   <ol style={{fontWeight:'bold'}}>
-  {dt.map((value)=>{
+  {dt.map((data)=>{
     
     return(
       <div>
-          <li><h2>{value.title}</h2></li>
-          <p>{value.body}</p>
+          <li><h2>{data.title}</h2></li>
+          <p>{data.body}</p>
           </div>
     )
   })}
